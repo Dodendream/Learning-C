@@ -1,0 +1,24 @@
+Problem: 
+The number S is called the mean of two numbers R1 and R2 if S is equal to (R1+R2)/2. 
+Mirko's birthday present for Slavko was two integers R1 and R2. 
+Slavko promptly calculated their mean which also happened to be an integer but then lost R2! Help Slavko restore R2. 
+
+-input 
+*The first and only line of input contains two integers R1 and S, both between -1000 and 1000.
+
+-output
+*Output R2 on a single line. 
+
+-Example input                                                                -Example output 
+*11 15                                                                          *19
+
+My Code
+#include<cstdio>
+int main()
+{
+    int a,S;
+    scanf("%d%d",&a,&S);
+     int c = S*2;
+     int d = c-a;
+     printf("%d",d);
+}
