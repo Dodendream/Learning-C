@@ -1,0 +1,50 @@
+-Problem
+There is an objective test result such as “OOXXOXXOOO”. An ‘O’ means a correct answer of a problem and an ‘X’ means a wrong answer. 
+The score of each problem of this test is calculated by itself and its just previous consecutive ‘O’s only when the answer is correct. 
+For example, the score of the 10th problem is 3 that is obtained by itself and its two previous consecutive ‘O’s. 
+Therefore, the score of “OOXXOXXOOO” is 10 which is calculated by “1+2+0+0+1+0+0+1+2+3”. 
+You are to write a program calculating the scores of test results. 
+
+-input
+*Your program is to read from standard input. The input consists of T test cases.
+The number of test cases T is given in the first line of the input. 
+Each test case starts with a line containing a string composed by ‘O’ and ‘X’ and the length of the string is more than 0 and less than 80.
+There is no spaces between ‘O’ and ‘X’. 
+
+-output
+*Your program is to write to standard output. 
+Print exactly one line for each test case. The line is to contain the score of the test case. 
+
+-Example input                                                           -Example output
+*5                                                                          10
+OOXXOXXOOO                                                                  9
+OOXXOOXXOO                                                                  7  
+OXOXOXOXOXOXOX                                                              55
+OOOOOOOOOO                                                                  30  
+OOOOXOOOOXOOOOX
+
+My Code
+#include<cstdio>
+#include<cstring>
+int main()
+{
+    int a,b,c = 0,cnt = 0;
+    char arr[81];
+    scanf("%d",&a);
+    for(int i = 0; i < a; i++){
+        scanf("%s",arr);
+        b = strlen(arr);
+        for(int j = 0; j < b; j++){
+            if(arr[j]=='O'){
+                cnt++;
+            }
+            else{
+                cnt = 0;
+            }
+            c += cnt;
+        }
+        printf("%d\n",c);
+        c = 0;
+        cnt = 0;
+    }
+}
