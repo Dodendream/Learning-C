@@ -8,4 +8,4 @@ Editor : Eric Kim
 
 Location : South Korea
 
-대부분의 문제들은 모두 www.acmicpc.net 에서 풀고 여기에 기제함.
+The main source of the problems are located on (http://codeup.kr/JudgeOnline/index.php) and (https://www.acmicpc.net)
